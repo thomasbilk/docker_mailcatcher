@@ -19,8 +19,6 @@ RUN gem install --no-document mailcatcher
 
 ENV SMTP_PORT 1025
 ENV HTTP_PORT 1080
-EXPOSE $HTTP_PORT
-EXPOSE $SMTP_PORT
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD supervisord -c /etc/supervisor/conf.d/supervisord.conf
