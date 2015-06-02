@@ -15,7 +15,7 @@ RUN apt-get update --yes && \
       libsqlite3-dev \
       supervisor
 
-RUN gem install --no-document mailcatcher
+RUN gem install --no-document --version '< 0.6' mailcatcher
 
 ENV SMTP_PORT 1025
 ENV HTTP_PORT 1080
